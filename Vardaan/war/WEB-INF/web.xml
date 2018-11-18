@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	
+	
+	
+		
+	<servlet>
+		<servlet-name>vardanLogin</servlet-name>
+		<servlet-class>com.team.vardan.controller.LoginController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>vardanLogin</servlet-name>
+		<url-pattern>/loginUrl</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>vardan</servlet-name>
+		<servlet-class>com.team.vardan.controller.RegistrationController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>vardan</servlet-name>
+		<url-pattern>/register</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>moreChild</servlet-name>
+		<servlet-class>com.team.vardan.controller.AddChildController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>moreChild</servlet-name>
+		<url-pattern>/addChild</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>sendmail</servlet-name>
+		<servlet-class>com.team.vardan.controller.ReminderController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>sendmail</servlet-name>
+		<url-pattern>/sendmail</url-pattern>
+	</servlet-mapping>
+		
+	<servlet>
+		<servlet-name>logout</servlet-name>
+		<jsp-file>/Logout.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>logout</servlet-name>
+		<url-pattern>/log</url-pattern>
+	</servlet-mapping>
+		
+
+	
+	
+	
+	
+	
+	<welcome-file-list>
+		<welcome-file>Home.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
